@@ -25,7 +25,7 @@ public class DataGenerator {
 
     }
 
-    static void setUpAll(RegistrationDto user) {
+    static void sendRequest(RegistrationDto user) {
         given()
                 .spec(requestSpec)
                 .body(user)
@@ -61,11 +61,7 @@ public class DataGenerator {
             return registereduser;
         }
 
-
-
-
     }
-
     @Value
     public static class RegistrationDto {
         String login;
